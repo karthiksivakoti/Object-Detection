@@ -1,28 +1,51 @@
-Real-Time Object Detection using YOLOv8 and Python
-Introduction
-This project demonstrates real-time object detection using the YOLOv8 architecture. The focus is on efficiently detecting objects in both images and video streams by leveraging deep learning. YOLOv8's lightweight design balances accuracy and performance, making it suitable for real-time applications.
+# Real-Time Object Detection using YOLOv8 and Python
 
-Key Components
-YOLOv8: Chosen for its optimized performance and speed, ideal for detecting multiple objects in real time.
-Python & Jupyter Notebooks: Utilized for writing scripts, testing, and documenting the results.
-OpenCV for Video Processing: Integrated to process video streams and detect moving objects.
-Model Inference: YOLOv8 pre-trained weights used for detecting objects in both images and video streams.
-Steps
-1. Dataset Preparation
-I collected a diverse dataset to test the model’s capabilities across multiple object types. Data was preprocessed, resized, and normalized to match YOLOv8 input requirements.
+## Introduction
+In this project, I implemented **real-time object detection** using the **YOLOv8 architecture**. My goal was to detect objects in both images and video streams efficiently, leveraging the power of deep learning. YOLOv8 was chosen for its balance between accuracy and speed.
 
-2. Model Selection
-I selected the YOLOv8n variant for its lightweight architecture, ideal for real-time object detection on limited resources without sacrificing much accuracy.
+## Key Components
+- **YOLOv8**: Utilized the YOLOv8 model for object detection due to its optimized performance.
+- **Python & Jupyter Notebooks**: Employed Python for scripting and Jupyter notebooks for experimentation.
+- **OpenCV for Video Processing**: Integrated for real-time video analysis.
+- **Model Inference**: Performed object detection using pre-trained YOLOv8 weights on both images and video streams.
 
-3. Inference on Images and Video
-The model was tested on both static images and continuous video feeds. Detection was applied frame by frame in videos, and objects were labeled in real time, using the model’s predictions for bounding boxes and class labels.
+## Steps
+### 1. Dataset Preparation
+Collected and processed data for testing the object detection model. The images were resized and normalized to match the input requirements of YOLOv8.
 
-4. Results
-Objects in both images and videos were successfully detected and labeled in real time. The results demonstrate YOLOv8’s ability to detect objects across various lighting conditions, distances, and orientations.
+### 2. Model Selection
+I selected the **YOLOv8n** variant for its lightweight architecture, suitable for real-time applications with limited computational resources.
 
-Challenges
-Balancing Accuracy and Speed: Adjusting parameters to maintain detection accuracy while ensuring real-time performance.
-Handling Object Size Variability: Smaller objects were sometimes missed due to distance or resolution constraints.
-Image Quality: Poor lighting or motion blur presented challenges for accurate detection.
-Conclusion
-This project highlights the effectiveness of YOLOv8 for real-time object detection. With high accuracy and fast processing, this implementation can be extended to various applications, such as surveillance, automation, and real-time video analytics.
+### 3. Inference on Images and Video
+The model was tested on a series of images and video streams, applying real-time detection and labeling. Detection results included bounding boxes, class labels, and confidence scores.
+
+### 4. Results
+The system successfully identified and labeled objects in real time, proving its efficiency in both static and video-based inputs.
+
+## Challenges
+- **Balancing Accuracy and Speed**: Ensuring high accuracy without sacrificing real-time performance.
+- **Handling Various Object Sizes**: Managing detection for both large and small objects in different contexts.
+- **Image Quality**: Detecting objects in varying conditions such as low light and motion blur.
+
+## Conclusion
+This project showcases the ability of **YOLOv8** to perform real-time object detection with high accuracy, even in dynamic video streams. It can be applied to a variety of fields, including surveillance and real-time analytics.
+
+## Future Improvements
+- Fine-tuning the model for specific use cases such as pedestrian or vehicle detection.
+- Enhancing performance under challenging conditions like low light and occlusions.
+- Implementing tracking across multiple frames to improve detection consistency.
+
+---
+
+## Example Usage
+
+### Inference on an Image:
+```python
+from ultralytics import YOLO
+
+# Load model and image
+model = YOLO('yolov8n.pt')
+results = model('path/to/image.jpg')
+
+# Display results
+results.show()
