@@ -3,6 +3,14 @@
 ## Introduction
 In this project, I implemented **real-time object detection** using the **YOLOv8 architecture**. My goal was to detect objects in both images and video streams efficiently, leveraging the power of deep learning. YOLOv8 was chosen for its balance between accuracy and speed.
 
+## Video Demonstration
+
+You can watch a demonstration of the results [here](Object_Detection_Output.mp4).
+
+Or download the video directly:
+
+[Download the video](Object_Detection_Output.mp4)
+
 ## Key Components
 - **YOLOv8**: Utilized the YOLOv8 model for object detection due to its optimized performance.
 - **Python & Jupyter Notebooks**: Employed Python for scripting and Jupyter notebooks for experimentation.
