@@ -5,11 +5,7 @@ In this project, I implemented **real-time object detection** using the **YOLOv8
 
 ## Video Demonstration
 
-You can watch a demonstration of the results [here](Object_Detection_Output.mp4).
-
-Or download the video directly:
-
-[Download the video](Object_Detection_Output.mp4)
+You can watch a demonstration of the results [![Watch the video](https://img.youtube.com/vi/MGLymNNt2JU/maxresdefault.jpg)](https://www.youtube.com/watch?v=MGLymNNt2JU)
 
 ## Key Components
 - **YOLOv8**: Utilized the YOLOv8 model for object detection due to its optimized performance.
